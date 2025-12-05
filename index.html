@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Piano Unicórnio Mágico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'unicorn-pink': '#ffb7d5',
+              'unicorn-dark-pink': '#ff8fab',
+              'unicorn-lilac': '#e0b0ff',
+              'unicorn-purple': '#c77dff',
+              'unicorn-gold': '#ffea00',
+              'unicorn-blue': '#a2d2ff',
+              'unicorn-white': '#fff0f5',
+            },
+            fontFamily: {
+              'comic': ['Comic Sans MS', 'Chalkboard SE', 'sans-serif'],
+            },
+            animation: {
+              'bounce-slow': 'bounce 3s infinite',
+              'float': 'float 4s ease-in-out infinite',
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'sparkle': 'sparkle 1s linear infinite',
+              'beam': 'beam 0.5s ease-out forwards',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-15px)' },
+              },
+              sparkle: {
+                '0%, 100%': { opacity: 1, transform: 'scale(1)' },
+                '50%': { opacity: 0.5, transform: 'scale(1.2)' },
+              },
+              beam: {
+                '0%': { transform: 'scaleY(0)', opacity: '0.8' },
+                '100%': { transform: 'scaleY(1)', opacity: '0' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar hide for cleaner UI */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      body {
+        overscroll-behavior: none;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
